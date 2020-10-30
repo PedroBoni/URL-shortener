@@ -14,6 +14,7 @@ export default {
     let { body } = req;
     let registered = 0;
     client.incr("id", (err, reply) => {
+      console.log(reply)
       let id = reply.toString(36);
 
       client.hmset(`url:${id}`, ["url", `${body.url}`])

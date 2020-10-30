@@ -1,6 +1,0 @@
-{
-  "permissions": [
-    "*://developer.mozilla.org/*",
-    "clipboardWrite"
-  ]
-}
