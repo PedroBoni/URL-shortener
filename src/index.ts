@@ -1,11 +1,10 @@
 import express from 'express';
 import cors from 'cors';
-import dotenv from 'dotenv';
 
 import routes from './routes';
 
 if(process.env.TS_NODE_DEV){
-  dotenv.config();
+  require("dotenv").config();
 }
 const port = process.env.PORT || 3001;
 
