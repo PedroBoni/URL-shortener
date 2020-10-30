@@ -25,7 +25,7 @@ export default {
 
   async show(req: express.Request, res: express.Response){
     let { id } = req.params;
-    client.hget(`url:${id}`, "url", (err, reply) => res.json({url: reply}))
+    client.hget(`url:${id}`, "url", (err, reply) => res.redirect(reply))
   },
 
   async index(req: express.Request, res: express.Response){
