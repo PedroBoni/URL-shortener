@@ -22,14 +22,14 @@ export default {
       res.json({registered, id})
     });
   },
-  
+
   async show(req: express.Request, res: express.Response){
     let { id } = req.params;
     client.hget(`url:${id}`, "url", (err, reply) => res.json({url: reply}))
   },
 
   async index(req: express.Request, res: express.Response){
-    let hostApp = "https://young-mesa-57935.herokuapp.com/";
+    let hostApp = "https://app-shortener-ss.herokuapp.com/";
     res.send(`Go to ${hostApp}`)
   }
 }
