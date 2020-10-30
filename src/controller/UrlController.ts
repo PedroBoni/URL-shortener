@@ -26,7 +26,8 @@ export default {
     client.hget(`url:${id}`, "url", (err, reply) => res.redirect(reply))
   },
   async index(req: express.Request, res: express.Response){
-    res.send(`Go to ${window.location.origin}/app`)
+    let host = req.get('host');
+    res.send(`Go to ${host}/app`)
   }
 }
 
