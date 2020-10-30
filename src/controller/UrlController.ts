@@ -3,7 +3,7 @@ import express from 'express';
 
 const client = redis.createClient({
   host: process.env.HOST,
-  port: process.env.PORT,
+  port: process.env.PORT_REDIS,
   password: process.env.PASSWORD
 });
 
