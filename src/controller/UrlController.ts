@@ -24,11 +24,11 @@ export default {
   },
   async show(req: express.Request, res: express.Response){
     let { id } = req.params;
-    client.hget(`url:${id}`, "url", (err, reply) => res.redirect(reply))
+    client.hget(`url:${id}`, "url", (err, reply) => res.json({url: reply}))
   },
   async index(req: express.Request, res: express.Response){
-    let host = req.get('host');
-    res.send(`Go to ${host}/app`)
+    let hostApp = "https://young-mesa-57935.herokuapp.com/";
+    res.send(`Go to ${hostApp}`)
   }
 }
 
